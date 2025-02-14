@@ -33,8 +33,7 @@
 
 有些服务会暴露多个命名端点，在默认情况下，URI 中的 scheme 部分被用于引用正在解析的端点名称，例如，对于 URI 为 `https://basket` 来说，它将被解析为命名为在 `basket` 服务之上的 `https` 端点。在 Aspire 的默认情况下，项目资源根据它们的  *launchSettings.json*  文件的内容定义其端点，所以，大多数的项目默认接受 `https` 和 `http` 命名的端点。引用 URI 的 scheme 部分可以包含多个通过 `+` 字符分隔的名称，并按照优先次序排列。例如，对于 `https+http://basket` 来说，将会尝试首先解析 `basket` 服务的 `https` 命名端点，如果没有找到，它将解析 `http` 端点。
 
-对于命名端点与预期方案不匹配的情况，也可以通过在请求 URI 的主机部分的第一个子域部分中指定端点名称来显式解析它们，当第一部分以下划线 (`_`) 为前缀时，格式为 'scheme：//_endpointName.serviceName' 。例如，如果名为 `basket` 的服务公开了名为 `dashboard` 的 HTTPS 端点，则可以使用 URI 为 `https+http：//_dashboard.basket` 来指定此端点，例如：
-
+对于命名端点与预期方案不匹配的情况，也可以通过在请求 URI 的主机部分的第一个子域部分中指定端点名称来显式解析它们，当第一部分以下划线 (`_`) 为前缀时，格式为 'scheme://_endpointName.serviceName' 。例如，如果名为 `basket` 的服务公开了名为 `dashboard` 的 HTTPS 端点，则可以使用 URI 为 `https+http://_dashboard.basket` 来指定此端点，例如：
 ```csharp
 builder.Services.AddHttpClient<BasketServiceClient>(
     static client => client.BaseAddress = new("https+http://basket"));
@@ -69,7 +68,7 @@ builder.Services.AddHttpClient<BasketServiceDashboardClient>(
 ## 运行应用
 
 1. 通过 `F5` 快捷键或者选择 `Start Debugging`  运行应用程序。
-2. 在仪表板中通过选择端点来打开 `MyWeatheApp` .
+2. 在仪表板中通过选择端点来打开 `MyWeatherApp` .
 3. 注意到 `MyWeatherHub` 应用同以前一样工作，现在它使用服务发现连接到 `Api` 服务.
 4. 在仪表板中点击 `MyWeatherHub` 项目的 `Details`. 这将调出 .NET Aspire 在从 App Host 运行应用程序时配置的所有设置。
 5. 点击其中的眼睛图标来查看配置值，卷绕到底部，你将看到对于 `Api` 服务的 `services__api__http__0` 和 `services__api__https__0` 配置了正确的值。
