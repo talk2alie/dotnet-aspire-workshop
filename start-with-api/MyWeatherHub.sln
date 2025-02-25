@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyWeatherHub", "MyWeatherHu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{170DC774-255B-4A7E-835F-B4686A5A21AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceDefaults", "ServiceDefaults\ServiceDefaults.csproj", "{28F81A77-0773-47D5-80E6-E5A888857F3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppHost", "AppHost\AppHost.csproj", "{21D25949-D285-464E-B2E5-9E5F981ADBDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{170DC774-255B-4A7E-835F-B4686A5A21AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{170DC774-255B-4A7E-835F-B4686A5A21AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{170DC774-255B-4A7E-835F-B4686A5A21AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28F81A77-0773-47D5-80E6-E5A888857F3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28F81A77-0773-47D5-80E6-E5A888857F3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28F81A77-0773-47D5-80E6-E5A888857F3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28F81A77-0773-47D5-80E6-E5A888857F3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21D25949-D285-464E-B2E5-9E5F981ADBDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21D25949-D285-464E-B2E5-9E5F981ADBDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21D25949-D285-464E-B2E5-9E5F981ADBDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21D25949-D285-464E-B2E5-9E5F981ADBDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
